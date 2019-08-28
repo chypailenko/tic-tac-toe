@@ -1,0 +1,17 @@
+<div class="game">
+  <div class="game-board">
+    <div class="header">
+      <h1>Tic Tac Toe</h1>
+    </div>
+    <app-board [stopPlay]="(stopPlay$ | async)" [squares]="(squares$ | async)" (resetAll)="handleReset()"
+               (coinPlacement)="handleCoinMovement($event)">
+    </app-board>
+  </div>
+  <div class="game-info">
+    <div>
+      <div class="status" [class.winner]="(stopPlay$ | async)">{{(status$ | async)}}</div>
+    </div>
+    <!--<lib-game-preview [currentPreview]="(stepNumber$ | async)" [history]="(history$ | async)"
+                      (handlePreview)="jumpTo($event)"></lib-game-preview>-->
+  </div>
+</div>

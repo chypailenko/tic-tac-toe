@@ -1,0 +1,10 @@
+<div>
+  <div class="board-row" *ngFor="let row of rows">
+    <app-square *ngFor="let column of row" [value]="squares[column]" [disabled]="stopPlay"
+                (squareSelection)="coinPlacement.emit(column)">
+    </app-square>
+  </div>
+  <div class="action-button-container">
+    <button (click)="resetAll.emit()">Reset Game</button>
+  </div>
+</div>

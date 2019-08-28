@@ -1,0 +1,45 @@
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-board {
+  margin: 0 auto;
+}
+
+.game-info {
+
+}
+
+.header h1 {
+  text-align: center;
+  border-bottom: 1px solid #999;
+  color: #757575;
+}
+
+.status {
+  text-align: center;
+  margin-top: 5px;
+  height: 24px;
+}
+
+.status.winner {
+  font-weight: bold;
+  animation: blinker 1s linear infinite;
+  font-size: 24px;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
