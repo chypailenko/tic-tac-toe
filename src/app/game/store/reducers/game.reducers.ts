@@ -2,11 +2,9 @@ import { GameActions, GameAction } from '../actions/game.actions';
 import { GameState, initialGameState } from '../state/game.state';
 import { calculateWinner, handleCoinPlacement } from '../helpers/game.helpers';
 
-export function gameReducers(
-    state: GameState = initialGameState, action: GameActions
-): GameState {
-    switch (action.type) {
 
+export function gameReducers(state: GameState = initialGameState, action: GameActions): GameState {
+    switch (action.type) {
         case GameAction.Reset: {
             return { ...initialGameState };
         }
@@ -27,7 +25,6 @@ export function gameReducers(
         }
 
         case GameAction.JumpTo: {
-
             const { payload: { index: step } } = action;
             const { history } = state;
 

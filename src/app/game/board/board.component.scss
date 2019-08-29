@@ -11,19 +11,17 @@
 .action-button-container {
   text-align: center;
   margin-top: 5px;
-}
-
-.action-button-container button {
-  background-color: #f3f3f3;
-  border: 1px solid #3c3c3c;
-  padding: 8px;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: 0.3s;
-  text-decoration: none;
-}
-
-.action-button-container button:hover {
-  opacity: 1;
-  text-decoration: underline;
+  button {
+    background-color: #f3f3f3;
+    border: 1px solid #3c3c3c;
+    padding: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+    text-decoration: none;
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
 }
