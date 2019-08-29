@@ -11,7 +11,5 @@
     <div>
       <div class="status" [class.winner]="(stopPlay$ | async)">{{(status$ | async)}}</div>
     </div>
-    <!--<lib-game-preview [currentPreview]="(stepNumber$ | async)" [history]="(history$ | async)"
-                      (handlePreview)="jumpTo($event)"></lib-game-preview>-->
   </div>
 </div>

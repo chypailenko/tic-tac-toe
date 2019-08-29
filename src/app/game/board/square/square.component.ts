@@ -6,7 +6,7 @@ import {
 @Component({
   selector: 'app-square',
   templateUrl: './square.component.html',
-  styleUrls: ['./square.component.css'],
+  styleUrls: ['./square.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SquareComponent implements OnInit {

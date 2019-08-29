@@ -24,20 +24,8 @@ export function gameReducers(state: GameState = initialGameState, action: GameAc
             };
         }
 
-        case GameAction.JumpTo: {
-            const { payload: { index: step } } = action;
-            const { history } = state;
-
-            return {
-                ...state,
-                stepNumber: step,
-                xIsNext: step % 2 === 0,
-                winner: calculateWinner(history[step].squares)
-            };
-        }
-
         default:
             return { ...state };
 
     }
-};
+}

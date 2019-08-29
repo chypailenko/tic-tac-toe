@@ -5,7 +5,6 @@ export enum GameAction {
     Reset = '[GAME] Reset',
     HandleCoinPlacement = '[GAME] Handle Coin Placement',
     CalculateWinner = '[GAME] Calculate Winner',
-    JumpTo = '[GAME] Jump To'
 }
 
 export class Reset implements Action {
@@ -24,10 +23,5 @@ export class CalculateWinner implements Action {
     constructor(public payload: Game) { }
 }
 
-export class JumpTo implements Action {
 
-    readonly type = GameAction.JumpTo;
-    constructor(public payload: { index: number }) { }
-}
-
-export type GameActions = Reset | HandleCoinPlacement | CalculateWinner | JumpTo;
+export type GameActions = Reset | HandleCoinPlacement | CalculateWinner;

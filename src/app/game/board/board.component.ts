@@ -10,7 +10,7 @@ import { Coin } from '../model/game.model';
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
-  styleUrls: ['./board.component.css'],
+  styleUrls: ['./board.component.scss'],
   providers: [
     {
       provide: BOARD_TOKEN,
@@ -32,7 +32,6 @@ export class BoardComponent implements OnInit {
   constructor(
     @Inject(BOARD_TOKEN) public rows: Array<Array<number>>
   ) {
-    // this.defaultBoardSetup();
   }
 
   ngOnInit() { }
